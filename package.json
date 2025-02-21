@@ -1,12 +1,14 @@
 {
   "name": "demo-pnpm-monorepo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "Chen Lei",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:app-a": "pnpm --filter ./apps/app-a run dev",
+    "build:app-a": "pnpm --filter ./apps/app-a run build-only",
+    "dev:app-b": "pnpm --filter ./apps/app-b run dev",
+    "build:app-b": "pnpm --filter ./apps/app-b run build-only"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
 }
