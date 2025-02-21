@@ -1,14 +1,19 @@
 {
   "name": "demo-pnpm-monorepo",
   "version": "1.0.0",
-  "author": "Chen Lei",
+  "description": "Demo for pnpm monorepo",
+  "private": true,
+  "type": "module",
+  "author": "Chen Lei <chenlei2424@gmail.com>",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev:app-a": "pnpm --filter ./apps/app-a run dev",
     "build:app-a": "pnpm --filter ./apps/app-a run build-only",
     "dev:app-b": "pnpm --filter ./apps/app-b run dev",
     "build:app-b": "pnpm --filter ./apps/app-b run build-only"
-  },
-  "devDependencies": {
-    "typescript": "^5.7.3"
   }
 }
